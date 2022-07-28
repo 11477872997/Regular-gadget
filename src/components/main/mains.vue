@@ -29,9 +29,7 @@
             </template>
       </el-collapse-item>
     </el-collapse>
-      <div v-show="falg">
-           <openmode ></openmode>
-      </div>
+         <openmode v-model:count="falg" />
   </div>
 </template>
 <script setup lang='ts'>
@@ -39,10 +37,10 @@ import modeview  from '../modeview/modeview.vue';
 import openmode  from '../openmode/openmode.vue';
  import {ref } from 'vue'
  import { ElMessage } from 'element-plus'
+const falg = ref<any >(false);
  // 正则输入框
-let regularValue = ref();
-let contentValue = ref();
-let falg = ref(false);
+let regularValue = ref<any>();
+let contentValue = ref<any>();
     //  生成随机类型
     class randomNUm{
       getrandom(){
@@ -93,7 +91,7 @@ class gethint{
 let hint = new gethint();
 // 正则列表
 const open = ()=>{
-  falg.value?falg.value =false:falg.value=true;
+  falg.value=true;
 }
 
 </script>
