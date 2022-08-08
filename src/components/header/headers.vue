@@ -21,6 +21,6 @@ function changePandT(index :any) {
 <style scoped>
 img{
   width: 70%;
-  height: 95%;
+  height: 100%;
 }
 </style>
